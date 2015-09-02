@@ -277,3 +277,8 @@ th {
 .ul-no-bullets {
     list-style-type: none;
 }
+
+a {
+    color: darkblue;
+    text-decoration: underline;
+}
