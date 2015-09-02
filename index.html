@@ -1,20 +1,1024 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="Redirect Page for Web Portfolio for Scott Nakada" content="">
-    <meta name="Scott M. Nakada" content="">
-    <meta HTTP-EQUIV="REFRESH" content="0; url=http://www.quickstartprototypes.com">
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Github Portfolio Page for Scott Nakada">
+    <meta name="author" content="Scott M. Nakada">
 
-    <title>Web Portfolio for Scott Nakada</title>
+    <title>Github Portfolio Page for Scott Nakada</title>
 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+          rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- AngularJS -->
+    <script src="js/angular.min.js"></script>
+
+    <!-- Angular Custom JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
 
 </head>
 
-<body>
-<h1>Web Portfolio for Scott Nakada</h1>
+<body data-ng-app="gitTemplate" data-ng-controller="MainCtrl">
+
+<!-- Navigation -->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-blue btn-lg pull-right toggle">
+            <i class="fa fa-times"></i>
+        </a>
+        <li class="sidebar-brand">
+            <a href="#top" onclick=$("#menu-close").click();>Portfolio</a>
+        </li>
+        <li>
+            <a href="#top" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="#penguins" onclick=$("#menu-close").click();>Penguins</a>
+        </li>
+        <li>
+            <a href="#mysdce" onclick=$("#menu-close").click();>mySDCE</a>
+        </li>
+        <li>
+            <a href="#gitviewer" onclick=$("#menu-close").click();>GitViewer</a>
+        </li>
+        <li>
+            <a href="#pouchsync" onclick=$("#menu-close").click();>Grocery List</a>
+        </li>
+        <li>
+            <a href="#userauth" onclick=$("#menu-close").click();>User Auth</a>
+        </li>
+        <li>
+            <a href="#foodflag" onclick=$("#menu-close").click();>Food Flag</a>
+        </li>
+        <li>
+            <a href="#platform" onclick=$("#menu-close").click();>Platforms</a>
+        </li>
+        <li>
+            <a href="#technologies" onclick=$("#menu-close").click();>Technologies</a>
+        </li>
+        <li>
+            <a href="#databases" onclick=$("#menu-close").click();>Databases</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Header -->
+<header id="top" class="header">
+    <div class="text-vertical-center">
+        <h1>Github Portfolio Page for Scott Nakada</h1>
+
+        <h3>The following Github repositories demonstrate the use of a variety of technologies.<br>
+            Many of these projects exist on multiple platforms:<br><br>
+            <ul class="ul-no-bullets">
+                <li>The Web</li>
+                <li>Android</li>
+                <li>iPhone/iPad</li>
+            </ul>
+            Several of these projects access databases, including:<br><br>
+            <ul class="ul-no-bullets">
+                <li>Firebase</li>
+                <li>Mongo DB</li>
+                <li>Pouch DB</li>
+                <li>Couch DB</li>
+            </ul>
+            The following shows which technologies are used in each app:
+        </h3>
+
+
+        <div class="csstransforms col-md-offset-2 col-md-5">
+            <table class="table table-header-rotated">
+                <thead>
+                <tr>
+                    <!-- First column header is not rotated -->
+                    <th class="no-csstransforms"></th>
+                    <!-- Following headers are rotated -->
+                    <th class="rotate">
+                        <div><span><img src="images/Web.png" width="20px">&nbsp;Web</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/Android.png" width="20px">&nbsp;Android</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/Apple.png" width="20px">&nbsp;iPhone/iPad</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/HTML5.png" width="20px">&nbsp;HTML5</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/CSS3.png" width="20px">&nbsp;CSS3</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/Javascript.png" width="20px">&nbsp;Javascript 5</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/Jquery.gif" width="20px">&nbsp;JQuery</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/JQueryMobile.png" width="20px">&nbsp;JQuery Mobile</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/AngularJS.png" width="20px">&nbsp;Angular JS</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/Bootstrap.png" width="20px">&nbsp;Bootstrap 3</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/NodeJS.png" width="20px">&nbsp;Node JS</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/ExpressJS.png" width="20px">&nbsp;Express JS</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/Firebase.png" width="20px">&nbsp;Firebase</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/MongoDB.png" width="20px">&nbsp;Mongo DB</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/PouchDB.png" width="20px">&nbsp;Pouch DB</span></div>
+                    </th>
+                    <th class="rotate">
+                        <div><span><img src="images/CouchDB.png" width="20px">&nbsp;Couch DB</span></div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <th class="row-header"><a href="#penguins">Penguins</a></th>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row-header"><a href="#mysdce">mySDCE</a></th>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row-header"><a href="#gitviewer">GitViewer</a></th>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row-header"><a href="pouchsync">Pouch Sync</a></th>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="database-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row-header"><a href="#userauth">UserAuth</a></th>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="database-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="database-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="row-header"><a href="#foodflag">FoodFlag</a></th>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="platform-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td class="database-color">
+                        <i class="fa fa-check-circle fa-lg"></i>
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                    <td class="database-color">
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br><br>
+        </div>
+
+    </div>
+</header>
+
+<!-- Penguins -->
+<section id="penguins" class="penguins">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Penguins</h2>
+                <hr class="small">
+                <div class="row">
+                    <h3>This is an educational app, with information about Penguins.</h3>
+
+                    <br>
+                    <center>
+                        <img src="images/resources/LaptopPenguins.png" width="45%">
+                        <img src="images/resources/AndroidPenguins.png" width="15%">&nbsp;&nbsp;&nbsp;
+                        <img src="images/resources/iPadPenguins.png" width="30%">
+                    </center>
+                    <br>
+
+                    <a data-ng-href="http://scottnakada.github.io/Penguins" class="btn btn-blue">
+                        Go to the Penguins App Page
+                    </a>
+                    <br><br><br>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- mySDCE -->
+<section id="mysdce" class="mysdce bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>mySDCE</h2>
+                <hr class="small">
+                <div class="row">
+                    <h3>Learn All About Classes at San Diego Community Colleges.</h3>
+
+                    <br>
+                    <center>
+                        <img src="images/resources/LaptopMySDCE.png" width="60%">
+                        <img src="images/resources/AndroidMySDCE.png" width="20%">
+
+                    </center>
+                    <br>
+
+                    <a data-ng-href="http://scottnakada.github.io/mySDCE" class="btn btn-blue">
+                        Go to the mySDCE App Page
+                    </a>
+                    <br><br><br>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- GitViewer -->
+<section id="gitviewer" class="gitviewer">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>GitViewer</h2>
+                <hr class="small">
+                <div class="row">
+                    <h3>This app accesses the Github API, and retrieves Github User and Repository information.</h3>
+
+                    <br>
+                    <center>
+                        <img src="images/resources/LaptopGitViewer.png" width="45%">
+                        <img src="images/resources/AndroidGitViewer.png" width="15%">&nbsp;&nbsp;&nbsp;
+                        <img src="images/resources/iPadGitViewer.png" width="30%">
+                    </center>
+                    <br>
+
+                    <a data-ng-href="http://scottnakada.github.io/GitViewer" class="btn btn-blue">
+                        Go to the GitViewer App Page
+                    </a>
+                    <br><br><br>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Grocery List -->
+<section id="pouchsync" class="pouchsync bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Grocery List</h2>
+                <hr class="small">
+                <div class="row">
+                    <h3>This app maintains a grocery list.
+                    </h3>
+
+                    <br>
+                    <center>
+                        <img src="images/resources/LaptopGroceryList.png" width="45%">
+                        <img src="images/resources/AndroidGroceryList.png" width="15%">&nbsp;&nbsp;&nbsp;
+                        <img src="images/resources/iPadGroceryList.png" width="30%">
+                    </center>
+                    <br>
+
+                    <a data-ng-href="http://scottnakada.github.io/pouchSync" class="btn btn-blue">
+                        Go to the Grocery List App Page
+                    </a>
+                    <br><br><br>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- UserAuth -->
+<section id="userauth" class="userauth">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>User Authorization</h2>
+                <hr class="small">
+                <div class="row">
+                    <h3>This repository is a collection of four apps that demonstrate the use of user authorization to
+                        access a database.
+                    </h3>
+
+                    <br>
+                    <center>
+                        <img src="images/resources/LaptopUserAuth.png" width="45%">
+                        <img src="images/resources/AndroidUserAuth.png" width="15%">&nbsp;&nbsp;&nbsp;
+                        <img src="images/resources/iPadUserAuth.png" width="30%">
+                    </center>
+                    <br>
+
+                    <a data-ng-href="http://scottnakada.github.io/UserAuth" class="btn btn-blue">
+                        Go to the User Authorization App Page
+                    </a>
+                    <br><br><br>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Food Flag -->
+<section id="foodflag" class="foodflag bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Food Flag</h2>
+                <hr class="small">
+                <div class="row">
+                    <h3>This apps helps people with food allergies decide what to eat when dining out at
+                        restaurants.
+                    </h3>
+
+                    <br>
+                    <center>
+                        <img src="images/resources/LaptopFoodFlag.png" width="45%">
+                        <img src="images/resources/AndroidFoodFlag.png" width="15%">&nbsp;&nbsp;&nbsp;
+                        <img src="images/resources/iPadFoodFlag.png" width="30%">
+                    </center>
+                    <br>
+
+                    <a data-ng-href="http://scottnakada.github.io/FoodFlag" class="btn btn-blue">
+                        Go to the Food Flag App Page
+                    </a>
+                    <br><br><br>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Platforms -->
+<section id="platform" class="platform">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Platforms</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.web">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.web.image}}"/>
+                            <h4>
+                                <strong>{{details.web.name}}</strong>
+                            </h4>
+
+                            <p>{{details.web.info}}</p>
+                            <a data-ng-href="{{details.web.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.mean">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.mean.image}}"/>
+                            <h4>
+                                <strong>{{details.mean.name}}</strong>
+                            </h4>
+
+                            <p>{{details.mean.info}}</p>
+                            <a data-ng-href="{{details.mean.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.android">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.android.image}}"/>
+                            <h4>
+                                <strong>{{details.android.name}}</strong>
+                            </h4>
+
+                            <p>{{details.android.info}}</p>
+                            <a data-ng-href="{{details.android.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.ios">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.ios.image}}"/>
+                            <h4>
+                                <strong>{{details.ios.name}}</strong>
+                            </h4>
+
+                            <p>{{details.ios.info}}</p>
+                            <a data-ng-href="{{details.ios.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.arduino">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.arduino.image}}"/>
+                            <h4>
+                                <strong>{{details.arduino.name}}</strong>
+                            </h4>
+
+                            <p>{{details.arduino.info}}</p>
+                            <a data-ng-href="{{details.arduino.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.raspberryPi">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.raspberryPi.image}}"/>
+                            <h4>
+                                <strong>{{details.raspberryPi.name}}</strong>
+                            </h4>
+
+                            <p>{{details.raspberryPi.info}}</p>
+                            <a data-ng-href="{{details.raspberryPi.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="platforms.intelEdison">
+                        <div class="platform-item">
+                            <img data-ng-src="{{details.intelEdison.image}}"/>
+                            <h4>
+                                <strong>{{details.intelEdison.name}}</strong>
+                            </h4>
+
+                            <p>{{details.intelEdison.info}}</p>
+                            <a data-ng-href="{{details.intelEdison.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Technologies -->
+<section id="technologies" class="technology bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Technologies</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.html5">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.html5.image}}"/>
+                            <h4>
+                                <strong>{{details.html5.name}}</strong>
+                            </h4>
+
+                            <p>{{details.html5.info}}</p>
+                            <a data-ng-href="{{details.html5.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.css3">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.css3.image}}"/>
+                            <h4>
+                                <strong>{{details.css3.name}}</strong>
+                            </h4>
+
+                            <p>{{details.css3.info}}</p>
+                            <a data-ng-href="{{details.css3.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.javascript">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.javascript.image}}"/>
+                            <h4>
+                                <strong>{{details.javascript.name}}</strong>
+                            </h4>
+
+                            <p>{{details.javascript.info}}</p>
+                            <a data-ng-href="{{details.javascript.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.jQuery">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.jQuery.image}}"/>
+                            <h4>
+                                <strong>{{details.jQuery.name}}</strong>
+                            </h4>
+
+                            <p>{{details.jQuery.info}}</p>
+                            <a data-ng-href="{{details.jQuery.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.jQueryMobile">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.jQueryMobile.image}}"/>
+                            <h4>
+                                <strong>{{details.jQueryMobile.name}}</strong>
+                            </h4>
+
+                            <p>{{details.jQueryMobile.info}}</p>
+                            <a data-ng-href="{{details.jQueryMobile.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.angularJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.angularJS.image}}"/>
+                            <h4>
+                                <strong>{{details.angularJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.angularJS.info}}</p>
+                            <a data-ng-href="{{details.angularJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.bootstrap">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.bootstrap.image}}"/>
+                            <h4>
+                                <strong>{{details.bootstrap.name}}</strong>
+                            </h4>
+
+                            <p>{{details.bootstrap.info}}</p>
+                            <a data-ng-href="{{details.bootstrap.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.php">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.php.image}}"/>
+                            <h4>
+                                <strong>{{details.php.name}}</strong>
+                            </h4>
+
+                            <p>{{details.php.info}}</p>
+                            <a data-ng-href="{{details.php.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.python">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.python.image}}"/>
+                            <h4>
+                                <strong>{{details.python.name}}</strong>
+                            </h4>
+
+                            <p>{{details.python.info}}</p>
+                            <a data-ng-href="{{details.python.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.nodeJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.nodeJS.image}}"/>
+                            <h4>
+                                <strong>{{details.nodeJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.nodeJS.info}}</p>
+                            <a data-ng-href="{{details.nodeJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.expressJS">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.expressJS.image}}"/>
+                            <h4>
+                                <strong>{{details.expressJS.name}}</strong>
+                            </h4>
+
+                            <p>{{details.expressJS.info}}</p>
+                            <a data-ng-href="{{details.expressJS.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Databases -->
+<section id="databases" class="databases">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Databases</h2>
+                <hr class="small">
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.firebase">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.firebase.image}}"/>
+                            <h4>
+                                <strong>{{details.firebase.name}}</strong>
+                            </h4>
+
+                            <p>{{details.firebase.info}}</p>
+                            <a data-ng-href="{{details.firebase.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.pouchDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.pouchDB.image}}"/>
+                            <h4>
+                                <strong>{{details.pouchDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.pouchDB.info}}</p>
+                            <a data-ng-href="{{details.pouchDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.couchDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.couchDB.image}}"/>
+                            <h4>
+                                <strong>{{details.couchDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.couchDB.info}}</p>
+                            <a data-ng-href="{{details.couchDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.mongoDB">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.mongoDB.image}}"/>
+                            <h4>
+                                <strong>{{details.mongoDB.name}}</strong>
+                            </h4>
+
+                            <p>{{details.mongoDB.info}}</p>
+                            <a data-ng-href="{{details.mongoDB.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" data-ng-show="technologies.mySQL">
+                        <div class="technology-item">
+                            <img data-ng-src="{{details.mySQL.image}}"/>
+                            <h4>
+                                <strong>{{details.mySQL.name}}</strong>
+                            </h4>
+
+                            <p>{{details.mySQL.info}}</p>
+                            <a data-ng-href="{{details.mySQL.link}}" class="btn btn-blue">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- Footer -->
+<footer class=" bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Quickstart Prototypes</strong>
+                </h4>
+
+                <p>9304 Galvin Avenue</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> (760)-583-8366</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:scottnakada@gmail.com">scottnakada@gmail.com</a>
+                    </li>
+                </ul>
+
+                <hr class="small">
+                <p>Copyright &copy; Quickstart Prototypes 2015</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/custom.js"></script>
+
 
 </body>
+
 </html>
