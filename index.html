@@ -66,10 +66,13 @@
             <a href="#pouchsync" onclick=$("#menu-close").click();>Grocery List</a>
         </li>
         <li>
+            <a href="#foodflag" onclick=$("#menu-close").click();>Food Flag</a>
+        </li>
+        <li>
             <a href="#userauth" onclick=$("#menu-close").click();>User Auth</a>
         </li>
         <li>
-            <a href="#foodflag" onclick=$("#menu-close").click();>Food Flag</a>
+            <a href="#userauthstore" onclick=$("#menu-close").click();>User Auth Store</a>
         </li>
         <li>
             <a href="#platform" onclick=$("#menu-close").click();>Platforms</a>
@@ -165,6 +168,24 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <tr>
+                        <td></td>
+                        <th colspan="3" class="platform-color">
+                            <strong>
+                                <center>Platforms</center>
+                            </strong>
+                        </th>
+                        <th colspan="9">
+                            <strong>
+                                <center>Programming Languages/Frameworks</center>
+                            </strong>
+                        </th>
+                        <th colspan="4" class="database-color">
+                            <strong>
+                                <center>Databases</center>
+                            </strong>
+                        </th>
+                    </tr>
 
                     <tr>
                         <th class="row-header"><a href="#penguins">Penguins</a></th>
@@ -371,6 +392,57 @@
                         </td>
                     </tr>
                     <tr>
+                        <th class="row-header"><a href="#foodflag">FoodFlag</a></th>
+                        <td class="platform-color">
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td class="platform-color">
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td class="platform-color">
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td>
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                        <td class="database-color">
+                            <i class="fa fa-check-circle fa-lg"></i>
+                        </td>
+                        <td class="database-color">
+
+                        </td>
+                        <td class="database-color">
+
+                        </td>
+                        <td class="database-color">
+
+                        </td>
+                    </tr>
+                    <tr>
                         <th class="row-header"><a href="#userauth">UserAuth</a></th>
                         <td class="platform-color">
                             <i class="fa fa-check-circle fa-lg"></i>
@@ -422,7 +494,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th class="row-header"><a href="#foodflag">FoodFlag</a></th>
+                        <th class="row-header"><a href="#userauth">UserAuthStore</a></th>
                         <td class="platform-color">
                             <i class="fa fa-check-circle fa-lg"></i>
                         </td>
@@ -454,16 +526,16 @@
                             <i class="fa fa-check-circle fa-lg"></i>
                         </td>
                         <td>
-
+                            <i class="fa fa-check-circle fa-lg"></i>
                         </td>
                         <td>
-
+                            <i class="fa fa-check-circle fa-lg"></i>
                         </td>
                         <td class="database-color">
                             <i class="fa fa-check-circle fa-lg"></i>
                         </td>
                         <td class="database-color">
-
+                            <i class="fa fa-check-circle fa-lg"></i>
                         </td>
                         <td class="database-color">
 
@@ -472,6 +544,7 @@
 
                         </td>
                     </tr>
+
                     </tbody>
                 </table>
                 <br><br>
@@ -652,58 +725,8 @@
     <!-- /.container -->
 </section>
 
-<!-- UserAuth -->
-<section id="userauth" class="userauth" data-ng-cloak>
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-10 col-lg-offset-1">
-                <h2>User Authorization</h2>
-                <hr class="small">
-                <div class="row">
-                    <h3>This repository is a collection of four apps that demonstrate the use of user authorization
-                        to access a database. Three apps share a common Firebase
-                        database, and if you register in one app, you can use the same login in the other
-                        apps. There is a web version, an Android version, and an apple (iPad/iPhone) version.
-                        The other app uses MongoDB for the database. It is a MEAN (Mongo DB, Express,
-                        Angular JS, Node JS) stack app. The user authentication is multi-level (different
-                        accounts can have different levels of authorization, user, manager, admin), and access
-                        to different menu items can be set/displayed by user level). Social media logins are available
-                        for Facebook, Google, Twitter, and Github.
-                    </h3>
-
-                    <br>
-                    <center>
-                        <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">
-                            <img src="images/resources/LaptopUserAuth.png" width="35%">
-                        </a>
-                        <a href="http://scottnakada.github.io/UserAuth/yoMongoAuth/dist/public/index.html">
-                            <img src="images/resources/LaptopMongoAuth.png" width="35%">
-                        </a>
-                        <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">
-                            <img src="images/resources/AndroidUserAuth.png" width="10%">
-                        </a>&nbsp;&nbsp;&nbsp;
-                        <a href="http://scottnakada.github.io/UserAuth/#ios">
-                            <img src="images/resources/iPadUserAuth.png" width="15%">
-                        </a>
-                    </center>
-                    <br>
-
-                    <a data-ng-href="http://scottnakada.github.io/UserAuth" class="btn btn-blue">
-                        <h4>Go to the User Authorization App Page</h4>
-                    </a>
-                    <br><br><br>
-                </div>
-                <!-- /.row (nested) -->
-            </div>
-            <!-- /.col-lg-10 -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
-</section>
-
 <!-- Food Flag -->
-<section id="foodflag" class="foodflag bg-primary" data-ng-cloak>
+<section id="foodflag" class="foodflag" data-ng-cloak>
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
@@ -746,8 +769,108 @@
     <!-- /.container -->
 </section>
 
+<!-- UserAuth -->
+<section id="userauth" class="userauth bg-primary" data-ng-cloak>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>User Authorization</h2>
+                <hr class="small">
+                <div class="row">
+                    <h3>This repository is a collection of four apps that demonstrate the use of user authorization
+                        to access a database. Three apps share a common Firebase
+                        database, and if you register in one app, you can use the same login in the other
+                        apps. There is a web version, an Android version, and an apple (iPad/iPhone) version.
+                        The other app uses MongoDB for the database. It is a MEAN (Mongo DB, Express,
+                        Angular JS, Node JS) stack app. The user authentication is multi-level (different
+                        accounts can have different levels of authorization, user, manager, admin), and access
+                        to different menu items can be set/displayed by user level). Social media logins are available
+                        for Facebook, Google, Twitter, and Github.
+                    </h3>
+
+                    <br>
+                    <center>
+                        <a href="http://scottnakada.github.io/UserAuth/yoFireAuth/dist/public/index.html">
+                            <img src="images/resources/LaptopUserAuth.png" width="35%">
+                        </a>
+                        <a href="https://yomongoauth.herokuapp.com/index.html">
+                            <img src="images/resources/LaptopMongoAuth.png" width="35%">
+                        </a>
+                        <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">
+                            <img src="images/resources/AndroidUserAuth.png" width="10%">
+                        </a>&nbsp;&nbsp;&nbsp;
+                        <a href="http://scottnakada.github.io/UserAuth/#ios">
+                            <img src="images/resources/iPadUserAuth.png" width="15%">
+                        </a>
+                    </center>
+                    <br>
+
+                    <a data-ng-href="http://scottnakada.github.io/UserAuth" class="btn btn-blue">
+                        <h4>Go to the User Authorization App Page</h4>
+                    </a>
+                    <br><br><br>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+<!-- UserAuthStore -->
+<section id="userauthstore" class="userauthstore" data-ng-cloak>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>User Authorization Store</h2>
+                <hr class="small">
+                <div class="row">
+                    <h3>This repository is a collection of four apps that demonstrate the use of a shopping cart with
+                        user authorization to access a database. Three apps share a common Firebase
+                        database, and if you register in one app, you can use the same login in the other
+                        apps. There is a web version, an Android version, and an apple (iPad/iPhone) version.
+                        The other app uses MongoDB for the database. It is a MEAN (Mongo DB, Express,
+                        Angular JS, Node JS) stack app. The user authentication is multi-level (different
+                        accounts can have different levels of authorization, user, manager, admin), and access
+                        to different menu items can be set/displayed by user level). Social media logins are available
+                        for Facebook, Google, Twitter, and Github.
+                    </h3>
+
+                    <br>
+                    <center>
+                        <a href="http://scottnakada.github.io/UserAuthStore/yoFireAuthStore/dist/public/index.html">
+                            <img src="images/resources/LaptopUserAuthStore.png" width="35%">
+                        </a>
+                        <a href="https://yomongoauthstore.herokuapp.com/index.html">
+                            <img src="images/resources/LaptopMongoAuthStore.png" width="35%">
+                        </a>
+                        <a href="http://www.amazon.com/Ionic-Firebase-User-Authentication-App/dp/B014LUR2HI/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1440823545&sr=1-1&keywords=ionFireAuth">
+                            <img src="images/resources/AndroidUserAuthStore.png" width="10%">
+                        </a>&nbsp;&nbsp;&nbsp;
+                        <a href="http://scottnakada.github.io/UserAuthStore/#ios">
+                            <img src="images/resources/iPadUserAuthStore.png" width="15%">
+                        </a>
+                    </center>
+                    <br>
+
+                    <a data-ng-href="http://scottnakada.github.io/UserAuthStore" class="btn btn-blue">
+                        <h4>Go to the User Authorization App Page</h4>
+                    </a>
+                    <br><br><br>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
 <!-- Platforms -->
-<section id="platform" class="platform" data-ng-cloak>
+<section id="platform" class="platform bg-primary" data-ng-cloak>
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
@@ -843,7 +966,7 @@
 </section>
 
 <!-- Technologies -->
-<section id="technologies" class="technology bg-primary" data-ng-cloak>
+<section id="technologies" class="technology" data-ng-cloak>
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
@@ -983,7 +1106,7 @@
 </section>
 
 <!-- Databases -->
-<section id="databases" class="databases" data-ng-cloak>
+<section id="databases" class="databases bg-primary" data-ng-cloak>
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
@@ -1058,7 +1181,7 @@
 </section>
 
 <!-- Footer -->
-<footer class=" bg-primary" data-ng-cloak>
+<footer class="" data-ng-cloak>
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
